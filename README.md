@@ -2,14 +2,12 @@
 
 MATJOM은 직장인의 반복적인 점심 의사결정 문제를 줄이기 위한 위치 기반 점심 추천 백엔드 프로젝트입니다.
 
-이 저장소는 공식 팀 저장소 `MATJOM/BACKEND`를 기준으로 진행한 개인 구현 근거 저장소이며, 포트폴리오 문서는 실제 기능 구현이 가장 많이 남아 있는 `feature/7-30-search-session-lifecycle` 브랜치를 기준으로 정리했습니다.
+공식 팀 저장소는 `MATJOM/BACKEND`이며, 이 저장소는 제가 담당한 백엔드 기능 구현과 검증 내용을 정리한 개인 작업 저장소입니다. 문서는 위치 기반 검색, 룰렛 추천, 방문 세션, 지오펜스 도착 판정 구현이 포함된 `feature/7-30-search-session-lifecycle` 브랜치를 기준으로 작성했습니다.
 
-## 포트폴리오 문서
+## 문서
 
-개인 기여 중심의 상세 정리는 아래 문서를 참고하세요.
-
-- [PORTFOLIO.md](./PORTFOLIO.md)
-- [docs/repo-notes.md](./docs/repo-notes.md)
+- [PORTFOLIO.md](./PORTFOLIO.md): 주요 기여와 구현 내용 요약
+- [docs/repo-notes.md](./docs/repo-notes.md): 저장소/브랜치 기준과 프로젝트 범위 설명
 
 ## 저장소 / 브랜치 기준
 
@@ -17,9 +15,9 @@ MATJOM은 직장인의 반복적인 점심 의사결정 문제를 줄이기 위�
 |---|---|
 | 공식 팀 저장소 | `MATJOM/BACKEND` |
 | 공식 기준 브랜치 | `develop` |
-| 개인 구현 근거 저장소 | `ROOTXBOT2/MATJOM_BACKEND` |
+| 개인 작업 저장소 | `ROOTXBOT2/MATJOM_BACKEND` |
 | 구현 기준 브랜치 | `feature/7-30-search-session-lifecycle` |
-| 포트폴리오 문서 브랜치 | `docs/matjom-portfolio` |
+| 문서 브랜치 | `docs/matjom-portfolio` |
 
 ## 주요 기능
 
@@ -111,7 +109,7 @@ Postgres/Redis 등을 사용해 실제 개발 환경을 구성하려면 `SPRING_
 - `src/main/java/com/matjom/matjom/common/ratelimit` : 검색 API RateLimit
 - `src/main/java/com/matjom/matjom/common/security` : Spring Security / JWT
 - `src/test/java/com/matjom/matjom` : 단위 테스트 및 통합 테스트
-- `docs/` : 포트폴리오 및 작업 설명 문서
+- `docs/` : 프로젝트 문서
 
 ## API 응답 규약
 
@@ -140,7 +138,3 @@ docker exec cache-redis redis-cli get healthcheck
 ```
 
 위 명령 결과 `db-postgis`는 `matjom_dev` 데이터베이스에 `devuser` 계정으로 접속 가능했고, Redis는 키/값 쓰기와 `PING` 응답이 정상적으로 반환되었습니다.
-
-## 참고
-
-이 브랜치는 포트폴리오 정리를 위한 문서 브랜치입니다. 공식 팀 저장소와 개인 구현 브랜치의 관계는 [docs/repo-notes.md](./docs/repo-notes.md)에 정리했습니다.
